@@ -1,0 +1,4 @@
+[submodule "3rdparty/qemu"]
+	path = 3rdparty/qemu
+	url = https://github.com/LinuxStereopticon/qemu.git
+	branch = stereopticon
