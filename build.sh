@@ -91,4 +91,4 @@ function build_3rdparty_cmake {
 }
 
 # Build direct dependencies
-build_3rdparty_autogen qemu "--target-list=aarch64-softmmu,x86_64-softmmu --cross-prefix=\"\""
+build_3rdparty_autogen qemu "--target-list=aarch64-softmmu,x86_64-softmmu"
