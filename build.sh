@@ -47,11 +47,7 @@ function build_3rdparty_autogen {
     env PKG_CONFIG_PATH=$PKG_CONFIG_PATH LDFLAGS="-L$INSTALL/lib" \
     ./configure --prefix=$INSTALL $2
     make -j$NUM_PROCS
-    if [ -f /usr/bin/sudo ]; then
-        sudo make install
-    else
-        make install
-    fi
+    make install
 }
 
 function build_cmake {
@@ -76,11 +72,7 @@ function build_cmake {
         -DCMAKE_LD_FLAGS="-L$INSTALL/lib" \
         -DCMAKE_LIBRARY_PATH=$INSTALL/lib $@
     make VERBOSE=1 -j$NUM_PROCS
-    if [ -f /usr/bin/sudo ]; then
-        sudo make install
-    else
-        make install
-    fi
+    make install
 }
 
 function build_3rdparty_cmake {
